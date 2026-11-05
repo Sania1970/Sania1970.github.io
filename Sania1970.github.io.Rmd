@@ -11,5 +11,25 @@ Learn more about me
 
 ![](images/20260413_Dini_9789.jpg){width=300px}
 
-# Link to page 
+
+## Learn more about me through this website 
+
+
+
+
+
+# Link to pages
 [Introduction](Introduction.html)
+[Resume](Resume.html)
+[Dashboard](Dashboard.html)
+
+## ALL MY TABS {.tabset}
+
+### Introduction
+This is my introduction: [Introduction](Introduction.html)
+
+### Resume 
+This is my resume: [Resume](Resume.html)
+
+### Dashboard 
+These are all the plots on National Climatic Data center dataset: [Dashboard](Dashboard.html)

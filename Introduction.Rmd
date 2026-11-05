@@ -6,10 +6,15 @@ output:
     toc_float: true 
 ---
 
+## Education
 
 My name is Sania Sheifuddin and I am currently pursuing a masters of public health in epidemiology with a certificate in Applied Bio-statistics. I am an international student from Dubai, United Arab Emirates and I did my undergraduate studies in Purdue University which is located in Indiana, US. During my undergrad, I majored in Biology and minored in Chemistry and Psychology. 
 
+## Why Public Health
+
 A study abroad trip to Norway and Sweden is what fueled my interest towards pursuing epidemiology and studying more about public health. Learning about different healthcare systems and how they function gave me insight into the different parts of the world and how their public health systems work. These observations made me realize how impactful it would be to bridge medicine and public health together on a global scale whilst learning from different countries. I was interested in collecting more data on the same and aim to contribute to coming up with better, safer and more efficient healthcare policies, therefore influencing a stronger system. 
+
+## Next Steps 
 
 To reach this goal, I plan on completing my masters degree and then joining the workforce right after to gain more experience in this field. I plan to use all of my learning's throughout my course to help me be successful in my mission to help with implementing better public health systems on a global scale. 
 
