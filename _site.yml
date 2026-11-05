@@ -4,11 +4,13 @@ navbar:
   title: "Sania's Portfolio"
   left:
     - text: "Home"
-      href: index.html
+      href: Sania1970.github.io.html
     - text: "Introduction"
       href: Introduction.html
     - text: "Resume"
       href: Resume.html
+    - text: "Dashboard"
+      href: dashboard.html 
   right:
     - icon: fa-envelope fa-lg
       href: mailto:sm5975@cumc.columbia.edu
@@ -18,4 +20,4 @@ navbar:
       href: https://www.linkedin.com/in/saniasheifuddin
 output:
   html_document:
-    theme: cerulean
+    theme: yeti

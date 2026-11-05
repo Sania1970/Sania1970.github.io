@@ -6,8 +6,6 @@ output:
     toc_float: true
 ---
 
-# This is Sania's Portfolio
-
 ## Welcome to my Portfolio! 
 Learn more about me
 
