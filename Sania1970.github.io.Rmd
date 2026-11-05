@@ -8,6 +8,9 @@ output:
 
 # This is Sania's Portfolio
 
+## Welcome to my Portfolio! 
+Learn more about me
+
 ![](images/20260413_Dini_9789.jpg){width=300px}
 
 # Link to page 
