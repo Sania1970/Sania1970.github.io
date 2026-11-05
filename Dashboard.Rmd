@@ -6,4 +6,72 @@ output:
     toc_float: true 
 ---
 
+```{r}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+library(dplyr)
+
+```
+
+```{r}
+data("ny_noaa")
+
+set.seed(1)
+
+ny_noaa = 
+  ny_noaa |> 
+  mutate(
+    year = lubridate::year(date),
+    month = lubridate::month(date, label = TRUE),
+    tmax = as.numeric(tmax) / 10,
+    tmin = as.numeric(tmin) / 10,
+    prcp = prcp / 10) |> 
+  select(id, date, year, month, prcp, snow, snwd, tmax, tmin) |> 
+  filter(
+    !is.na(tmax), 
+    !is.na(tmin),
+    !is.na(prcp),
+    !is.na(snow),
+    year %in% 2000:2010) |> 
+  slice_sample(n = 5000)
+
+```
+
+#Chart A - Scatterplot
+
+```{r}
+ny_noaa |>
+  mutate(text_label = str_c("Station: ", id, "\nDate: ", date, "\nPrecipitation: ", prcp, " mm")) |> 
+  plot_ly(
+    x = ~tmin, y = ~tmax, type = "scatter", mode = "markers",
+    color = ~prcp, text = ~text_label, alpha = 0.5) |> 
+  layout(
+    title = "Daily Max vs. Min Temperature (°C)",
+    xaxis = list(title = "Minimum temperature (°C)"),
+    yaxis = list(title = "Maximum temperature (°C)"))
+
+```
+#Chart B - Box Plot
+
+```{r}
+ny_noaa |> 
+  plot_ly(y = ~tmax, color = ~month, type = "box", colors = "viridis") |> 
+  layout(
+    title = "Max Temperature by Month",
+    yaxis = list(title = "Max temperature (°C)"))
+```
+#Chart C Bar Plots
+
+```{r}
+ny_noaa |> 
+  filter(snow > 0) |> 
+  count(month) |> 
+  plot_ly(x = ~month, y = ~n, color = ~month, type = "bar", colors = "viridis") |> 
+  layout(
+    title = "Number of Snow Days by Month",
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Number of days with snowfall"))
+```
 
