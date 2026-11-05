@@ -1,0 +1,21 @@
+name: "Sania's Portfolio"
+output_dir: "."
+navbar:
+  title: "Sania's Portfolio"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Introduction"
+      href: Introduction.html
+    - text: "Resume"
+      href: Resume.html
+  right:
+    - icon: fa-envelope fa-lg
+      href: mailto:sm5975@cumc.columbia.edu
+    - icon: fa-github fa-lg
+      href: https://github.com/Sania1970
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/saniasheifuddin
+output:
+  html_document:
+    theme: cerulean

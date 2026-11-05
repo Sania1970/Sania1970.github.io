@@ -1,0 +1,14 @@
+---
+title: "Sania's E-portfolio "
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# This is Sania's Portfolio
+
+![](images/20260413_Dini_9789.jpg){width=300px}
+
+# Link to page 
+[Introduction](Introduction.html)
