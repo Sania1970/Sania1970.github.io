@@ -1,12 +1,14 @@
 ---
-title: "Dashboard "
+title: "Dashboard"
 output: 
-  html_document:
-    toc: true
-    toc_float: true 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    navbar:
+      - { title: "Home", href: "index.html", align: left }
 ---
 
-```{r}
+```{r setup, include=FALSE}
 library(flexdashboard)
 library(tidyverse)
 library(p8105.datasets)
@@ -15,7 +17,7 @@ library(dplyr)
 
 ```
 
-```{r}
+```{r, include=FALSE}
 data("ny_noaa")
 
 set.seed(1)
@@ -39,7 +41,10 @@ ny_noaa =
 
 ```
 
-#Chart A - Scatterplot
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A - Scatterplot
 
 ```{r}
 ny_noaa |>
@@ -53,16 +58,22 @@ ny_noaa |>
     yaxis = list(title = "Maximum temperature (°C)"))
 
 ```
-#Chart B - Box Plot
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B - Boxplot
 
 ```{r}
 ny_noaa |> 
   plot_ly(y = ~tmax, color = ~month, type = "box", colors = "viridis") |> 
   layout(
-    title = "Max Temperature by Month",
-    yaxis = list(title = "Max temperature (°C)"))
+    title = "Maximum Temperature by Month",
+    yaxis = list(title = "Maximum temperature (°C)"))
+
 ```
-#Chart C Bar Plots
+
+### Chart C - Bar Chart
 
 ```{r}
 ny_noaa |> 
@@ -70,8 +81,12 @@ ny_noaa |>
   count(month) |> 
   plot_ly(x = ~month, y = ~n, color = ~month, type = "bar", colors = "viridis") |> 
   layout(
-    title = "Number of Snow Days by Month",
+    title = "Number of Snowfall Days by Month",
     xaxis = list(title = "Month"),
     yaxis = list(title = "Number of days with snowfall"))
+
 ```
 
+What I changed:
+
+YAML: Replaced html_document with toc by f
