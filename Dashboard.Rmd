@@ -86,7 +86,3 @@ ny_noaa |>
     yaxis = list(title = "Number of days with snowfall"))
 
 ```
-
-What I changed:
-
-YAML: Replaced html_document with toc by f
