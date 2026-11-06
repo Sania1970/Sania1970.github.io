@@ -4,13 +4,13 @@ navbar:
   title: "Sania's Portfolio"
   left:
     - text: "Home"
-      href: Sania1970.github.io.html
+      href: index.html
     - text: "Introduction"
       href: Introduction.html
     - text: "Resume"
       href: Resume.html
     - text: "Dashboard"
-      href: dashboard.html 
+      href: Dashboard.html 
   right:
     - icon: fa-envelope fa-lg
       href: mailto:sm5975@cumc.columbia.edu
